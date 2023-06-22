@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="63.515" height="63.515" viewBox="0 0 63.515 63.515">
+  <g id="Group_52" data-name="Group 52" transform="translate(-779.014 -527.834)">
+    <g id="sap-concur" transform="translate(779.014 527.834)">
+      <g id="Group_29" data-name="Group 29" transform="translate(0)">
+        <path id="Path_51" data-name="Path 51" d="M223.547,36.726a9.726,9.726,0,1,1,0-19.452,9.214,9.214,0,0,1,6.779,2.8l5.01-5.01A16.571,16.571,0,0,0,223.4,10.2a16.8,16.8,0,0,0,0,33.6,17.468,17.468,0,0,0,11.937-4.863l-5.01-5.01a10.108,10.108,0,0,1-6.779,2.8" transform="translate(-193.337 4.831)" fill="#fff"/>
+        <path id="Path_52" data-name="Path 52" d="M229.074,18.7a4.274,4.274,0,1,0,4.274,4.274,4.277,4.277,0,0,0-4.274-4.274" transform="translate(-184.716 8.857)" fill="#fff"/>
+        <path id="Path_53" data-name="Path 53" d="M197.6,63.515h63.515V0H197.6Zm7.074-7.221V7.074h49.22v49.22h-49.22Z" transform="translate(-197.6)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,33 @@
+/* RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, 
+body {
+  min-height: 100vh;
+  background-color: black;
+  overflow: hidden;
+}
+
+/* TYPOGRAPHY */
+
+
+
+/* MAIN */
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* CARDS */
+
+
+
+/* HOVER MENU */
