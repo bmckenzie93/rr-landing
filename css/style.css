@@ -57,8 +57,18 @@ li:hover {
   cursor: pointer;
 }
 li.rollover:hover .rollover-menu {
-  display: flex;
   opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+li:nth-child(2n+2).rollover:hover .rollover-menu {
+  left: calc(-100% - 24px);
+}
+li:nth-child(3n+3).rollover:hover .rollover-menu {
+  left: calc(-200% - 40px);
+}
+li:nth-child(4n+4).rollover:hover .rollover-menu {
+  left: calc(-300% - 56px);
 }
 li.rollover::after {
   content: url(../assets/plus-circle.svg);
@@ -95,17 +105,18 @@ a p {
 }
 
 .rollover-menu {
-  /* display: flex; */
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
   flex-wrap: wrap;
   transition: opacity .2s ease-in-out;
-  display: none;
-  opacity: 0;
-  background-color: rgba(0, 0, 0, .9);
+  background-color: rgba(0, 0, 0, .95);
   background-color: salmon;
   z-index: 2;
   position: absolute;
   top: calc(100% + 3px);
-  left: -6px;
+  left: -9px;
   min-height: calc(100% + 46px);
   justify-content: center;
   align-items: center;
@@ -124,8 +135,8 @@ a p {
 
 /*  TODO LIST
 
-- make mobile responsive down to 2 columns
-- create roll over popups
+- get dropdown rr foundation to work
+- make mobile responsive
 - insert correct links for each box
 
 */
