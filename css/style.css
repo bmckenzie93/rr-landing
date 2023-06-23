@@ -56,6 +56,10 @@ li:hover {
   border-color: white;
   cursor: pointer;
 }
+li.rollover:hover .rollover-menu {
+  display: flex;
+  opacity: 1;
+}
 li.rollover::after {
   content: url(../assets/plus-circle.svg);
   position: absolute;
@@ -70,7 +74,7 @@ a {
   display: block;
   border-radius: inherit;
   color: inherit;
-  padding: 30px 0 45px;
+  padding: 26px 0 45px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -89,3 +93,39 @@ a p {
   transform: translateX(-50%);
   width: 100%;
 }
+
+.rollover-menu {
+  /* display: flex; */
+  flex-wrap: wrap;
+  transition: opacity .2s ease-in-out;
+  display: none;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, .9);
+  background-color: salmon;
+  z-index: 2;
+  position: absolute;
+  top: calc(100% + 3px);
+  left: -6px;
+  min-height: calc(100% + 46px);
+  justify-content: center;
+  align-items: center;
+  min-width: 640px;
+  padding: 20px 0;
+
+}
+.rollover-menu li {
+  border-color: white;
+  background-color: black;
+  width: 150px;
+  height: 150px;
+
+}
+
+
+/*  TODO LIST
+
+- make mobile responsive down to 2 columns
+- create roll over popups
+- insert correct links for each box
+
+*/
