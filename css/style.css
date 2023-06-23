@@ -1,6 +1,5 @@
-/* POPPPINS BOLD */
+/* FONT */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
-
 
 /* RESET */
 *,
@@ -10,7 +9,6 @@
   margin: 0;
   padding: 0;
 }
-
 
 /* BODY */
 html, 
@@ -26,14 +24,14 @@ body {
   line-height: 1.1;
 }
 
-
-/* MAIN STYLES */
+/* HEADER */
 header {
   display: flex;
   justify-content: center;
   margin: 43px 0;
 }
 
+/* GRID */
 ul {
   list-style: none;
   display: grid;
@@ -43,6 +41,7 @@ ul {
   max-width: 640px;
 }
 
+/* CARDS */
 li {
   position: relative;
   height: 150px;
@@ -56,6 +55,8 @@ li:hover {
   border-color: white;
   cursor: pointer;
 }
+
+/* ROLLOVER MENU POSITIONS */
 li.rollover:hover .rollover-menu {
   opacity: 1;
   visibility: visible;
@@ -70,6 +71,9 @@ li:nth-child(3n+3).rollover:hover .rollover-menu {
 li:nth-child(4n+4).rollover:hover .rollover-menu {
   left: calc(-300% - 56px);
 }
+li:nth-child(6).rollover:hover .rollover-menu {
+  left: calc(-100% - 24px);
+}
 li.rollover::after {
   content: url(../assets/plus-circle.svg);
   position: absolute;
@@ -77,6 +81,7 @@ li.rollover::after {
   top: 12px;
 }
 
+/* CARD INTERIORS */
 a {
   text-decoration: none;
   width: 100%;
@@ -104,6 +109,7 @@ a p {
   width: 100%;
 }
 
+/* ROLLOVER MENUS */
 .rollover-menu {
   z-index: -1;
   opacity: 0;
@@ -112,7 +118,6 @@ a p {
   flex-wrap: wrap;
   transition: opacity .2s ease-in-out;
   background-color: rgba(0, 0, 0, .95);
-  background-color: salmon;
   z-index: 2;
   position: absolute;
   top: calc(100% + 3px);
@@ -124,19 +129,24 @@ a p {
   padding: 20px 0;
 
 }
+
+/* ROLLOVER MENU CARDS */
 .rollover-menu li {
   border-color: white;
   background-color: black;
   width: 150px;
   height: 150px;
-
+}
+.rollover-menu p {
+  bottom: 50%;
+  transform: translate(-50%, 50%);
+  font-size: 16px;
 }
 
 
 /*  TODO LIST
 
-- get dropdown rr foundation to work
 - make mobile responsive
-- insert correct links for each box
+- insert links for each box
 
 */
