@@ -16,7 +16,7 @@ body {
   min-height: 100vh;
   background-color: black;
   color: #FFDF19;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   display: flex;
   justify-content: center;
   font-size: 12px;
@@ -40,6 +40,11 @@ ul {
   row-gap: 20px;
   max-width: 640px;
 }
+@media(max-width: 650px) {
+  ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 /* CARDS */
 li {
@@ -62,6 +67,12 @@ li.rollover:hover .rollover-menu {
   visibility: visible;
   z-index: 2;
 }
+li.rollover::after {
+  content: url(../assets/plus-circle.svg);
+  position: absolute;
+  right: 12px;
+  top: 12px;
+}
 li:nth-child(2n+2).rollover:hover .rollover-menu {
   left: calc(-100% - 24px);
 }
@@ -74,12 +85,15 @@ li:nth-child(4n+4).rollover:hover .rollover-menu {
 li:nth-child(6).rollover:hover .rollover-menu {
   left: calc(-100% - 24px);
 }
-li.rollover::after {
-  content: url(../assets/plus-circle.svg);
-  position: absolute;
-  right: 12px;
-  top: 12px;
+@media(max-width: 650px) {
+  li:nth-child(odd).rollover:hover .rollover-menu {
+    left: -6px;
+  }
+  li:nth-child(even).rollover:hover .rollover-menu {
+    left: calc(-100% - 24px);
+  }
 }
+
 
 /* CARD INTERIORS */
 a {
@@ -127,7 +141,11 @@ a p {
   align-items: center;
   min-width: 640px;
   padding: 20px 0;
-
+}
+@media(max-width: 650px) {
+  .rollover-menu {
+    min-width: 320px;
+  }
 }
 
 /* ROLLOVER MENU CARDS */
@@ -141,12 +159,5 @@ a p {
   bottom: 50%;
   transform: translate(-50%, 50%);
   font-size: 16px;
+  max-width:  130px;
 }
-
-
-/*  TODO LIST
-
-- make mobile responsive
-- insert links for each box
-
-*/
