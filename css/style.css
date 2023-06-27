@@ -61,7 +61,7 @@ li:hover {
   cursor: pointer;
 }
 
-/* ROLLOVER MENU POSITIONS */
+/* ROLLOVER MENU POSITIONS: DOWN */
 li.rollover:hover .rollover-menu {
   opacity: 1;
   visibility: visible;
@@ -91,6 +91,34 @@ li:nth-child(6).rollover:hover .rollover-menu {
   }
   li:nth-child(even).rollover:hover .rollover-menu {
     left: calc(-100% - 24px);
+  }
+}
+
+/* ROLLOVER MENU POSITIONS: UP */
+li:nth-child(12).rollover:hover .rollover-menu {
+  top: calc(-150% + 23px);
+}
+li:nth-child(13).rollover:hover .rollover-menu {
+  top: calc(-150% + 23px);
+}
+li:nth-child(14).rollover:hover .rollover-menu {
+  top: calc(-150% + 23px);
+}
+li:nth-child(15).rollover:hover .rollover-menu {
+  top: calc(-250% - 3px);
+}
+@media(max-width: 650px) {
+  li:nth-child(12).rollover:hover .rollover-menu {
+    top: calc(-250% - 3px);
+  }
+  li:nth-child(13).rollover:hover .rollover-menu {
+    top: calc(-250% - 3px);
+  }
+  li:nth-child(14).rollover:hover .rollover-menu {
+    top: calc(-130% - 6px);
+  }
+  li:nth-child(15).rollover:hover .rollover-menu {
+    top: calc(-500% + 17px);
   }
 }
 
@@ -131,7 +159,8 @@ a p {
   display: flex;
   flex-wrap: wrap;
   transition: opacity .2s ease-in-out;
-  background-color: rgba(0, 0, 0, .95);
+  background-color: rgba(0, 0, 0, .75);
+  background-color: aquamarine;
   z-index: 2;
   position: absolute;
   top: calc(100% + 3px);
