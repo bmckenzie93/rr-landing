@@ -22,6 +22,12 @@ body {
   font-size: 12px;
   font-family: 'Poppins', sans-serif;
   line-height: 1.1;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+body::-webkit-scrollbar{
+  display: none;
+  width: 0 !important;
 }
 
 /* HEADER */
@@ -36,11 +42,10 @@ ul {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  row-gap: 20px;
-  max-width: 640px;
+  gap: 20px;
+  max-width: 660px;
 }
-@media(max-width: 650px) {
+@media(max-width: 680px) {
   ul {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -74,23 +79,23 @@ li.rollover::after {
   top: 12px;
 }
 li:nth-child(2n+2).rollover:hover .rollover-menu {
-  left: calc(-100% - 24px);
+  left: calc(-100% - 29px);
 }
 li:nth-child(3n+3).rollover:hover .rollover-menu {
-  left: calc(-200% - 40px);
+  left: calc(-200% - 55px);
 }
 li:nth-child(4n+4).rollover:hover .rollover-menu {
-  left: calc(-300% - 56px);
+  left: calc(-300% - 81px);
 }
 li:nth-child(6).rollover:hover .rollover-menu {
-  left: calc(-100% - 24px);
+  left: calc(-100% - 29px);
 }
-@media(max-width: 650px) {
+@media(max-width: 680px) {
   li:nth-child(odd).rollover:hover .rollover-menu {
-    left: -6px;
+    left: -3px;
   }
   li:nth-child(even).rollover:hover .rollover-menu {
-    left: calc(-100% - 24px);
+    left: calc(-100% - 29px);
   }
 }
 
@@ -107,7 +112,7 @@ li:nth-child(14).rollover:hover .rollover-menu {
 li:nth-child(15).rollover:hover .rollover-menu {
   top: calc(-250% - 3px);
 }
-@media(max-width: 650px) {
+@media(max-width: 680px) {
   li:nth-child(12).rollover:hover .rollover-menu {
     top: calc(-250% - 3px);
   }
@@ -121,7 +126,6 @@ li:nth-child(15).rollover:hover .rollover-menu {
     top: calc(-500% + 17px);
   }
 }
-
 
 /* CARD INTERIORS */
 a {
@@ -160,18 +164,17 @@ a p {
   flex-wrap: wrap;
   transition: opacity .2s ease-in-out;
   background-color: rgba(0, 0, 0, .75);
-  background-color: aquamarine;
   z-index: 2;
   position: absolute;
   top: calc(100% + 3px);
-  left: -9px;
+  left: -3px;
   min-height: calc(100% + 46px);
   justify-content: center;
   align-items: center;
-  min-width: 640px;
+  min-width: 660px;
   padding: 20px 0;
 }
-@media(max-width: 650px) {
+@media(max-width: 680px) {
   .rollover-menu {
     min-width: 320px;
   }
@@ -179,14 +182,16 @@ a p {
 
 /* ROLLOVER MENU CARDS */
 .rollover-menu li {
-  border-color: white;
+  border-color: #afafaf;
   background-color: black;
   width: 150px;
   height: 150px;
 }
 .rollover-menu p {
+  color: white;
+  line-height:140%;
   bottom: 50%;
   transform: translate(-50%, 50%);
-  font-size: 16px;
-  max-width:  130px;
+  font-size: 14px;
+  max-width:  100px;
 }
