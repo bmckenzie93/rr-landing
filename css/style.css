@@ -62,7 +62,8 @@ li {
   transition: border-color .2s ease-in-out;
 }
 li:hover {
-  border-color: white;
+  border-color: #afafaf;
+  color: white;
   cursor: pointer;
 }
 
