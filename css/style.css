@@ -79,6 +79,9 @@ li.rollover::after {
   right: 12px;
   top: 12px;
 }
+li.rollover:hover::after {
+  content: url(../assets/plus-circle-white.svg);
+}
 li:nth-child(2n+2).rollover:hover .rollover-menu {
   left: calc(-100% - 29px);
 }
