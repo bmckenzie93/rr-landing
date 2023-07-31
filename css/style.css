@@ -107,12 +107,13 @@ li:nth-child(7).rollover:hover .rollover-menu {
 }
 
 /* ROLLOVER MENU POSITIONS: UP */
-li:nth-child(9).rollover:hover .rollover-menu {
+li:nth-child(10).rollover:hover .rollover-menu {
   top: calc(-150% + 23px);
-  left: -3px;
+  left: calc(-100% - 29px);
 }
-li:nth-child(12).rollover:hover .rollover-menu {
+li:nth-child(11).rollover:hover .rollover-menu {
   top: calc(-150% + 23px);
+  left: calc(-200% - 55px);
 }
 li:nth-child(13).rollover:hover .rollover-menu {
   top: calc(-150% + 23px);
